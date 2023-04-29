@@ -1,0 +1,28 @@
+{{ define "main" }}
+    <header id="site-header">
+    	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        <p>{{ .Site.Params.Description }}</p>
+    </header>
+
+	<main>
+		<div id="tag-list">
+			<ul>
+                {{range $name, $taxonomy := .Site.Taxonomies.tags}}
+                      {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+            		     <li>
+                            <a href="{{ .RelPermalink }}">{{ $name }}</a>
+                         </li>
+                      {{end}}
+            	{{end}}
+    		</ul>
+    		</div>
+            <div id="post-list">
+    		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+    		{{ range $paginator.Pages }}
+    			{{ .Render "summary" }}
+    		{{ end }}
+            </div>
+		{{ partial "pagination.html" . }}
+	</main>
+
+{{ end }}

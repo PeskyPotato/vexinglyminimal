@@ -1,0 +1,129 @@
+:root {
+    --background-color: #1d1f21;
+    --font-color: #c9cacc;
+    --highlight-color: #2bbc8a;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+a {
+    color: var(--font-color)
+}
+main {
+    margin: 2rem;
+}
+pre {
+    overflow-x: auto;
+    padding: 15px 15px 10px 15px;
+    border: 1px dotted #444;
+    font-size: 13px;
+    font-family: monospace;
+    line-height: 22px;
+    position: relative;
+}
+.copy-code-button {
+    color: #272822;
+    background-color: #FFF;
+    border-color: #272822;
+    border: 2px solid;
+    border-radius: 3px 3px 0px 0px;
+
+    /* right-align */
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+
+    margin-bottom: -2px;
+    padding: 3px 8px;
+    font-size: 0.8em;
+}
+
+.copy-code-button:hover {
+    cursor: pointer;
+    background-color: #F2F2F2;
+}
+
+.copy-code-button:focus {
+    background-color: #E6E6E6;
+    outline: 0;
+}
+
+.copy-code-button:active {
+    background-color: #D9D9D9;
+}
+
+pre {
+    margin-top: 0;
+}
+pre code {
+    display: block;
+    padding: 0;
+    border: none;
+}
+code {
+    font-family: monospace;
+    padding: 0 5px;
+    border: 1px dotted #444;
+}
+#site-header {
+    text-align: center;
+    margin: 1rem;
+}
+/* Tag list */
+#tag-list, #post-list {
+    border-style: solid;
+    /* width: 70vw; */
+    margin: 1rem auto;
+    padding: 1rem;
+
+}
+#tag-list ul {
+    -moz-column-count: 4;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 20px;
+    column-count: 4;
+    column-gap: 20px;
+    list-style-type: none;
+}
+
+/* Post list */
+#post-list {
+}
+.post {
+    display: flex;
+}
+.post-info-title {
+    font-weight: bold;
+}
+a:hover {
+    color: var(--highlight-color);
+}
+.post-img {
+    margin: 0.5rem;
+}
+.post-img img {
+    width: 20rem;
+}
+
+/* Post page */
+#post-content {
+    margin: 0rem auto;
+    width: 70vw;
+}
+#post-content img {
+    max-height: 40rem;
+    max-width: 70vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .post {
+        flex-direction: column;
+    }
+    .post-img img {
+        width: 50vw;
+    }
+}

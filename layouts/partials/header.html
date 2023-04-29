@@ -1,0 +1,10 @@
+<nav>
+    [<a href="/">home</a>]
+    [
+    {{range $name, $taxonomy := .Site.Taxonomies.tags}}
+          {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+		     <a href={{ .RelPermalink }}>{{$name}}</a>
+          {{end}}
+	{{end}}
+    ]
+</nav>

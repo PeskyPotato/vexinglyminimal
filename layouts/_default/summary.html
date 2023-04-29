@@ -1,0 +1,23 @@
+<article class="post">
+	<div class="post-img">
+		<div class="post-img-info"></div>
+		<img src="{{ .Params.media }}" alt="{{ .Params.media_alt}}">
+	</div>
+	<div class="post-text">
+		<div class="post-info">
+			<a class="post-info-title" href="{{ .Permalink }}">{{ .Title }}</a>
+			<time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "02.01.2006 15:04" }}</time>
+			{{ range .Params.tags }}
+			<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+			{{ end }}
+
+		</div>
+		<div class="post-blurb">
+			{{ .Summary }}
+			{{ if .Truncated }}
+				<a href="{{ .Permalink }}">Read more...</a>
+			{{ end }}
+		</div>
+	</div>
+</article>
+<hr>
