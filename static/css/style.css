@@ -1,5 +1,6 @@
 :root {
     --background-color: #1d1f21;
+    --title-background: #323232;
     --font-color: #c9cacc;
     --highlight-color: #2bbc8a;
 }
@@ -92,6 +93,11 @@ code {
 
 /* Post list */
 #post-list {
+}
+.post-info {
+    margin: 5px 0;
+    padding: 5px;
+    background: var(--title-background);
 }
 .post {
     display: flex;
