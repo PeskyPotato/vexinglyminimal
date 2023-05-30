@@ -129,7 +129,17 @@ a:hover {
     margin: auto;
 }
 
+@media  only screen and (max-width: 1050px) {
+    #post-content {
+        width: 80vw;
+    }
+    
+}
+
 @media only screen and (max-width: 600px) {
+    #post-content {
+        width: 90vw;
+    }
     .post {
         flex-direction: column;
     }
