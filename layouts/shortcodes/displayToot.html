@@ -1,0 +1,57 @@
+{{ $toot_reference := .Get 0 }}
+{{ $url := printf "static/data/toots/%s.json" $toot_reference }}
+{{ $dataJ := getJSON $url }}
+
+<style>
+    .toot {
+        max-width: 550px;
+        background: #3a3a3a;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 3px;
+        padding: 30px;
+        border-bottom: 1px solid #FFF;
+        border-top: 1px solid #FFF;
+    }
+    .metadata {
+        display: flex;
+        align-items: flex-start;
+        font-size: 14px;
+    }
+    img.avatar {
+        width: 48px;
+        margin: 0 15px 0 0 !important;
+    }
+</style>
+
+{{ with $dataJ }}
+{{ if ne .content "" }}
+<article class="toot">
+<div class="metadata">
+ <img class="avatar" src="{{ .account.avatar }}"/>
+ <div>
+ <div class="name"><a href="{{ .account.url }}">@{{ .account.username }}</a></div>
+ <div class="date"><time class="dt-published" datetime='{{ .created_at }}'>{{ dateFormat "2 January 2006 15:04" (time .created_at) }}</time></div>
+ <p>{{ .content | safeHTML }}</p>
+ </div>
+
+</div>
+
+{{ if gt (len .media_attachments) 0 }}
+<div class="toot-imgs">
+{{ range .media_attachments}}
+ {{ if eq .type "image" }}
+  <img src="{{ .preview_url }}" alt="{{ .description }}"/>
+ {{ end }}
+{{ end }}
+</div>
+{{ end }}
+
+<div class="toot-social">
+<span><i class='fas fa-share'></i> Replies: {{ .replies_count }} </span>
+<span><i class='fas fa-retweet'></i> Boosts: {{ .reblogs_count }} </span>
+<span><i class='fas fa-star'></i> Favourites: {{ .favourites_count }} </span>
+<span>| <a href="{{ .url }}">Source</a></span>
+</article>
+{{ end }}
+{{ end }}
