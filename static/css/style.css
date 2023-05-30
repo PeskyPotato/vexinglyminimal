@@ -8,6 +8,9 @@
 body {
     background-color: var(--background-color);
     color: var(--font-color);
+    font-family: monospace;
+    line-height: 1.7;
+    font-size: 14px;
 }
 
 a {
@@ -118,11 +121,12 @@ a:hover {
 /* Post page */
 #post-content {
     margin: 0rem auto;
-    width: 70vw;
+    width: 55vw;
 }
 #post-content img {
-    max-height: 40rem;
-    max-width: 70vw;
+    height: auto;
+    max-width: 100%;
+    margin: auto;
 }
 
 @media only screen and (max-width: 600px) {
