@@ -2,7 +2,7 @@
 	<meta property="og:title" content="{{ .Title }}" />
 	<meta property="og:type" content="article" />
 	{{ if isset .Params "media" }}
-		<meta property="og:image" src="{{ .Params.media }}" alt="{{ .Params.media_alt}}">
+		<meta property="og:image" content="{{ .Params.media }}" alt="{{ .Params.media_alt}}">
 	{{ end }}
 	<meta property="og:description" content="{{ .Summary }}" />
 	<meta property="og:url" content="{{ .Permalink }}" />
