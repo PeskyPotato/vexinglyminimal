@@ -2,28 +2,6 @@
 {{ $url := printf "static/data/toots/%s.json" $toot_reference }}
 {{ $dataJ := getJSON $url }}
 
-<style>
-    .toot {
-        max-width: 550px;
-        background: #3a3a3a;
-        margin: 0 auto;
-        margin-top: 50px;
-        border-radius: 3px;
-        padding: 30px;
-        border-bottom: 1px solid #FFF;
-        border-top: 1px solid #FFF;
-    }
-    .metadata {
-        display: flex;
-        align-items: flex-start;
-        font-size: 14px;
-    }
-    img.avatar {
-        width: 48px;
-        margin: 0 15px 0 0 !important;
-    }
-</style>
-
 {{ with $dataJ }}
 {{ if ne .content "" }}
 <article class="toot">
