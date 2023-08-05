@@ -1,8 +1,10 @@
 <article class="post">
-	<div class="post-img">
-		<div class="post-img-info"></div>
-		<img src="{{ .Params.media }}" alt="{{ .Params.media_alt}}">
-	</div>
+	{{ if isset .Params "media" }}
+		<div class="post-img">
+			<div class="post-img-info"></div>
+			<img src="{{ .Params.media }}" alt="{{ .Params.media_alt}}">
+		</div>
+	{{ end }}
 	<div class="post-text">
 		<div class="post-info">
 			<a class="post-info-title" href="{{ .Permalink }}">{{ .Title }}</a>
