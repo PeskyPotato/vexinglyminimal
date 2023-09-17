@@ -92,8 +92,15 @@ code {
     column-count: 4;
     column-gap: 20px;
     list-style-type: none;
+    padding: 0;
 }
-
+@media only screen and (max-width: 600px) {
+    #tag-list ul {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    } 
+}
 /* Post list */
 #post-list {
 }
