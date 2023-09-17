@@ -168,3 +168,22 @@ img.avatar {
     width: 48px;
     margin: 0 15px 0 0 !important;
 }
+
+table {
+    border:none;
+    border-collapse: collapse;
+}
+table td {
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    padding: 0 10px 0 10px;
+}
+table td:first-child {
+    border-left: none;
+}
+table td:last-child {
+    border-right: none;
+}
+tbody tr:nth-child(odd) {
+  background-color: #2b2b2b;
+}
