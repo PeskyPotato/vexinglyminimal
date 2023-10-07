@@ -1,8 +1,9 @@
 <article class="post">
 	{{ if isset .Params "media" }}
 		<div class="post-img">
+			{{ $image := resources.GetRemote .Params.media }}
 			<div class="post-img-info"></div>
-			<img src="{{ .Params.media }}" alt="{{ .Params.media_alt}}">
+			<img src='{{ ( $image.Resize "620x" ).RelPermalink }}' alt="{{ .Params.media_alt}}">
 		</div>
 	{{ end }}
 	<div class="post-text">
