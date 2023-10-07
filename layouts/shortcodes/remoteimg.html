@@ -1,0 +1,6 @@
+{{ $img := resources.GetRemote (.Get "img" ) }}
+{{ $alt := .Get "alt" }}
+
+<p>
+    <img src='{{ ( $img.Resize "2000x" ).RelPermalink }}' alt="{{ $alt }}">
+</p>
