@@ -4,6 +4,13 @@
     --font-color: #c9cacc;
     --highlight-color: #2bbc8a;
 }
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: white;
+        --title-background: rgb(211, 211, 211);
+        --font-color: black;
+    }
+}
 
 body {
     background-color: var(--background-color);
