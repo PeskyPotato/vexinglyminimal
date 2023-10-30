@@ -26,6 +26,9 @@ a {
 main {
     margin: 2rem;
 }
+nav, footer {
+    margin: 0 2rem;
+}
 pre {
     overflow-x: auto;
     padding: 15px 15px 10px 15px;
