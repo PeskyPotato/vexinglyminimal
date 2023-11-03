@@ -1,5 +1,5 @@
 <nav>
-    [<a href="/">home</a>]
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
     [
     {{range $name, $taxonomy := .Site.Taxonomies.tags}}
           {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
