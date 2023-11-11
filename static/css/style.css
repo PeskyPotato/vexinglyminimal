@@ -145,6 +145,17 @@ a:hover {
     max-width: 100%;
     margin: auto;
 }
+figure {
+    text-align: center;
+}
+figure p {
+    font-size: 12px;
+}
+figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media  only screen and (max-width: 1050px) {
     #post-content {
