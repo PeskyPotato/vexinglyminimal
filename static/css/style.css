@@ -17,7 +17,7 @@ body {
     color: var(--font-color);
     font-family: monospace;
     line-height: 1.7;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 a {
@@ -157,23 +157,25 @@ figure img {
     margin-right: auto;
 }
 
-@media  only screen and (max-width: 1050px) {
-    #post-content {
+@media  only screen and (max-width: 900px) {
+    #post-content, nav, main, footer {
         width: 80vw;
+        margin: 0rem auto;
     }
-    
-}
-
-@media only screen and (max-width: 600px) {
-    #post-content {
-        width: 90vw;
-    }
-    .post {
+     .post {
         flex-direction: column;
     }
     .post-img img {
-        width: 50vw;
+        width: 100%;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    #post-content, nav, main, footer {
+        width: 90vw;
+        margin: 0rem auto;
+    }
+
 }
 
 /* Toots */
