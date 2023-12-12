@@ -1,10 +1,15 @@
 <nav>
     {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-    [
-    {{range $name, $taxonomy := .Site.Taxonomies.tags}}
-          {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-		     <a href={{ .RelPermalink }}>{{$name}}</a>
-          {{end}}
-	{{end}}
-    ]
+    {{ partial "menu.html" (dict "menuID" "secondary" "page" .) }}
+    {{ with .Site.Params.ShowAllTagsOnNav }}
+    {{ if eq . true }}
+        [
+        {{range $name, $taxonomy := $.Site.Taxonomies.tags}}
+            {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+                <a href={{ .RelPermalink }}>{{$name}}</a>
+            {{end}}
+        {{end}}
+        ]
+    {{ end }}
+    {{ end }}
 </nav>
