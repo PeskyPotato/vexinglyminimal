@@ -87,7 +87,32 @@ code {
     margin: 1rem;
 }
 /* Tag list */
-#tag-list, #post-list {
+#feeds {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+#feeds .segment {
+    width: 50%;
+}
+.segment .segment-title {
+    margin: 0.5rem 0 0.5rem 0;
+}
+.article time {
+    font-size: 0.75rem;
+}
+.article {
+    margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 600px) {
+  #feeds {
+    flex-direction: column;
+  }
+  #feeds .segment {
+    width: 92%;
+  }
+}
+#tag-list, #post-list, .segment {
     border-style: solid;
     /* width: 70vw; */
     margin: 1rem auto;
