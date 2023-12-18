@@ -18,7 +18,6 @@
 			{{ if gt $date_updated $date_posted }}
 				| <strong>Updated: </strong><time datetime="{{ .Date.Format "2006-01-02T15:04:05"}}">{{ .Lastmod.Format "02.01.2006 15:04" }}</time>
 			{{ end }}
-			<strong>Date: </strong><time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "02.01.2006 15:04" }}</time>
 			{{ with .Params.tags }}
 			| <strong>Tags:</strong>
 				{{ range . }}
