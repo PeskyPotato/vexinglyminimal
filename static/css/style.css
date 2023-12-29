@@ -167,8 +167,10 @@ a:hover {
 }
 #post-content img {
     height: auto;
+    max-height: 80vh;
     max-width: 100%;
     margin: auto;
+    display: block;
 }
 figure {
     text-align: center;
