@@ -1,6 +1,24 @@
 {{ $img := resources.GetRemote (.Get "img" ) }}
 {{ $alt := .Get "alt" }}
 
+{{- if (.Get "caption") }}
+<figure>
+    <img src='{{ ( $img.Resize "2000x" ).RelPermalink }}' alt="{{ $alt }}">
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption>
+            <p>
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- if .Get "attrlink" }}</a>{{ end }}
+            </p>
+        </figcaption>
+    {{ end }}
+</figure>
+{{ else }}
 <p>
     <img src='{{ ( $img.Resize "2000x" ).RelPermalink }}' alt="{{ $alt }}">
 </p>
+{{- end }}
