@@ -158,6 +158,9 @@ a:hover {
 }
 .post-img img {
     width: 20rem;
+    max-width: 26rem;
+    max-height: 12rem;
+    object-fit: cover;
 }
 
 /* Post page */
@@ -194,6 +197,8 @@ figure img {
     }
     .post-img img {
         width: 100%;
+        max-width: none;
+        max-height: 30vh;
     }
 }
 
