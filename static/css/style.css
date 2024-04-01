@@ -147,6 +147,10 @@ code {
 .post {
     display: flex;
 }
+.post-text {
+    box-sizing: border-box;
+    width: 100%;
+}
 .post-info-title {
     font-weight: bold;
 }
