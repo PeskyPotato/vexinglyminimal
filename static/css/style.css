@@ -7,7 +7,7 @@
 @media (prefers-color-scheme: light) {
     :root {
         --background-color: white;
-        --title-background: rgb(211, 211, 211);
+        --title-background: #d3d3d3;
         --font-color: black;
     }
 }
@@ -252,5 +252,5 @@ table td:last-child {
     border-right: none;
 }
 tbody tr:nth-child(odd) {
-  background-color: #2b2b2b;
+  background-color: var(--title-background);
 }
