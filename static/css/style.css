@@ -254,3 +254,12 @@ table td:last-child {
 tbody tr:nth-child(odd) {
   background-color: var(--title-background);
 }
+
+.section-heading .section-anchor {
+    fill: var(--font-color);
+    transition: opacity .05s linear;
+}
+.section-heading:not(:hover) .section-anchor:not(:focus-visible){
+    opacity: 0;
+    transition: opacity 5s linear;
+}
