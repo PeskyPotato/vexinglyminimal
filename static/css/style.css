@@ -195,10 +195,24 @@ figure.alignright {
     height: auto;
     float: right;
 }
+iframe.alignright {
+    max-width: 25vw;
+    height: auto;
+    float: right;
+    min-height: 35vh;
+    margin: 0.5rem;
+}
 figure.alignleft {
     max-width: 30vw;
     height: auto;
     float: left;
+}
+iframe.alignleft {
+    max-width: 25vw;
+    height: auto;
+    float: left;
+    min-height: 35vh;
+    margin: 0.5rem;
 }
 
 @media  only screen and (max-width: 900px) {
@@ -225,6 +239,12 @@ figure.alignleft {
         max-width: 100%;
     }
 }
+
+@media only screen and (max-width: 700px) {
+    iframe.alignright, iframe.alignleft {
+        max-width: 100%;
+    }
+
 
 /* Toots */
 .toot {
