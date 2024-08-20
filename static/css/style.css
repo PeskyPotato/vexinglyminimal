@@ -244,7 +244,7 @@ iframe.alignleft {
     iframe.alignright, iframe.alignleft {
         max-width: 100%;
     }
-
+}
 
 /* Toots */
 .toot {
