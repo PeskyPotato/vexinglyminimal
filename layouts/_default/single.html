@@ -7,6 +7,12 @@
 	{{ end }}
 	<meta property="og:description" content="{{ .Summary }}" />
 	<meta property="og:url" content="{{ .Permalink }}" />
+	{{ if isset .Site.Params "authors" }}
+		{{ $author := index .Site.Params.authors .Params.author }}
+		{{ if isset $author "mastodon" }}
+			<meta name="fediverse:creator" content="{{ $author.mastodon }}" />
+		{{ end }}
+	{{ end }}
 {{ end }}
 {{ define "main" }}
 	<main id="post-content">

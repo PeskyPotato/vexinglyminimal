@@ -30,7 +30,18 @@ hidden: true
 type: posts
 summary: This page contains an archive of all posts.
 ---
+```
+
+### Mastodon author tags
+
+Adds a meta tag with a link to mastodon. Set an authors mastodon handle in the `hugo.toml` file. In this case I will use "pesky".
 
 ```
+[params.authors]
+[params.authors.pesky]
+  mastodon = "@peskypotato@hachyderm.io"
+```
+
+Then if author is set in the frontmatter of a post the appropriate meta tags will be added in the header to show up on Mastodon for author attribution. For more on author tags read [Robb Knight's post](https://rknight.me/blog/setting-up-mastodon-author-tags/).
 
 
