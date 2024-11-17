@@ -29,6 +29,10 @@ main {
 nav, footer {
     margin: 0 2rem;
 }
+blockquote {
+    border-left: 2px var(--font-color) solid;
+    padding-left: 1rem;
+}
 pre {
     overflow-x: auto;
     padding: 15px 15px 10px 15px;
