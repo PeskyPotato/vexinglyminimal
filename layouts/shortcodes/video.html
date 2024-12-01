@@ -1,0 +1,5 @@
+{{ $alt := .Get "alt" }}
+<video {{ with .Get "class" }} class="{{ . }}"{{ end }} preload="{{ .Get "preload" }}" controls>
+    <source src="{{ .Get "src" }}" type="{{ .Get "type" }}">
+    <p>{{ $alt }}</p>
+</video>

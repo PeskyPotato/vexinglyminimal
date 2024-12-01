@@ -194,7 +194,11 @@ figure img {
     margin-left: auto;
     margin-right: auto;
 }
-figure.alignright {
+video {
+    width: 100%;
+    margin: 0 5px;
+}
+figure.alignright, video.alignright {
     max-width: 25vw;
     height: auto;
     float: right;
@@ -206,8 +210,8 @@ iframe.alignright {
     min-height: 35vh;
     margin: 0.5rem;
 }
-figure.alignleft {
-    max-width: 30vw;
+figure.alignleft, video.alignleft {
+    max-width: 25vw;
     height: auto;
     float: left;
 }
@@ -239,7 +243,7 @@ iframe.alignleft {
         width: 90vw;
         margin: 0rem auto;
     }
-    figure.alignright, figure.alignleft {
+    figure.alignright, figure.alignleft, video.alignright, video.alignleft {
         max-width: 100%;
     }
 }
