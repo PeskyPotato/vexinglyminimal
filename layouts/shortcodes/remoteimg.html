@@ -2,7 +2,7 @@
 {{ $alt := .Get "alt" }}
 
 {{- if (.Get "caption") }}
-<figure>
+<figure {{ if .Get "class" }}class="{{ .Get "class" }}"{{ end }}>
     <img src='{{ ( $img.Resize "2000x" ).RelPermalink }}' alt="{{ $alt }}">
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>
@@ -19,6 +19,6 @@
 </figure>
 {{ else }}
 <p>
-    <img src='{{ ( $img.Resize "2000x" ).RelPermalink }}' alt="{{ $alt }}">
+    <img src='{{ ( $img.Resize "2000x" ).RelPermalink }}' alt="{{ $alt }}" {{ if .Get "class" }}class="{{ .Get "class" }}"{{ end }}>
 </p>
 {{- end }}

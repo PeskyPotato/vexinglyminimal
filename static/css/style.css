@@ -198,7 +198,7 @@ video {
     width: 100%;
     margin: 0 5px;
 }
-figure.alignright, video.alignright {
+#post-content img.alignright, figure.alignright, video.alignright {
     max-width: 25vw;
     height: auto;
     float: right;
@@ -210,7 +210,7 @@ iframe.alignright {
     min-height: 35vh;
     margin: 0.5rem;
 }
-figure.alignleft, video.alignleft {
+#post-content img.alignleft, figure.alignleft, video.alignleft {
     max-width: 25vw;
     height: auto;
     float: left;
@@ -243,7 +243,7 @@ iframe.alignleft {
         width: 90vw;
         margin: 0rem auto;
     }
-    figure.alignright, figure.alignleft, video.alignright, video.alignleft {
+    #post-content img.alignright, figure.alignright, figure.alignleft, video.alignright, video.alignleft {
         max-width: 100%;
     }
 }
