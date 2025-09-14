@@ -5,7 +5,7 @@
 		<meta property="og:image" content="{{ .Params.media }}" />
 		<meta property="og:image:alt" content="{{ .Params.media_alt }}" />
 	{{ end }}
-	<meta property="og:description" content="{{ .Summary }}" />
+	<meta property="og:description" content="{{ .Summary | plainify}}" />
 	<meta property="og:url" content="{{ .Permalink }}" />
 	{{ if .Site.Params.authors }}
 		{{ $author := index .Site.Params.authors .Params.author }}
