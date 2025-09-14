@@ -1,15 +1,15 @@
 {{ define "meta" }}
 	<meta property="og:title" content="{{ .Title }}" />
 	<meta property="og:type" content="article" />
-	{{ if isset .Params "media" }}
+	{{ if .Params.media }}
 		<meta property="og:image" content="{{ .Params.media }}" />
 		<meta property="og:image:alt" content="{{ .Params.media_alt }}" />
 	{{ end }}
 	<meta property="og:description" content="{{ .Summary }}" />
 	<meta property="og:url" content="{{ .Permalink }}" />
-	{{ if isset .Site.Params "authors" }}
+	{{ if .Site.Params.authors }}
 		{{ $author := index .Site.Params.authors .Params.author }}
-		{{ if isset $author "mastodon" }}
+		{{ if $author.mastodon }}
 			<meta name="fediverse:creator" content="{{ $author.mastodon }}" />
 		{{ end }}
 	{{ end }}
